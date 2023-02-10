@@ -32,27 +32,29 @@ function kaitensushi() {
                 break;
 
             } else {
-                sushi = sushi.filter(x => !seat.includes(x));
-                save = sushi.filter(x => seat.includes(x));
-                console.log(save);
+                // sushi = sushi.filter(x => !seat.includes(x));
+                // save = sushi.filter(x => seat.includes(x));
+                // console.log(save);
                 // seat[n].bool = false;
                 // save = n;
 
-                // for(let n = 0; n < arr[1]; n++) {
-                //     for(let m = 0; m < arr[2]; m++) {
-                //         if(seat[n].bool) {
-                //             // sushi.splice(m);
-                //             seat[n].bool = false;
-                //             save = n;
-                //         } else continue;
-                //     }
-                // }
+                for(let n = 0; n < arr[1]; n++) {
+                    for(let m = 0; m < arr[2]; m++) {
+                        if(seat[n].bool) {
+                            // sushi.splice(m);
+                            sushi = sushi.filter(x => !seat.includes(x));
+                            seat[n].bool = false;
+                            save = n;
+                        } else continue;
+                    }
+                }
                 if(sushi[sushi.length - 1] < arr[0]) {
                     sushi = sushi.map(m => m + 1);
                     console.log('pass')
+
                     count++;
-                } else {
-                    sushi[sushi.length - 1] = 0;
+                // } else if(sushi[]) {
+                    sushi.map() = 0;
                     console.log('fail')
 
                     count++;
@@ -69,4 +71,4 @@ function kaitensushi() {
     return result;
 }
 
-console.log(kaitensushi());
+// console.log(kaitensushi());
